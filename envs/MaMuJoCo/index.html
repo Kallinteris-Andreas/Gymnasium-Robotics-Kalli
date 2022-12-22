@@ -340,8 +340,10 @@
 <p>These environments were introduced in <a class="reference external" href="https://arxiv.org/abs/2003.06709">“FACMAC: Factored Multi-Agent Centralised Policy Gradients”</a></p>
 <p>There are 2 types of Environments, included (1) multi-agent factorizations of <a class="reference external" href="https://gymnasium.farama.org/environments/mujoco/">Gymansium/MuJoCo</a> tasks and (2) new complex MuJoCo tasks meant to me solved with multi-agent Algorithms</p>
 <p>This Represents the first, easy to use Framework for research of agent factorization</p>
-<p>obb
-[ant]</p>
+<p>The unique dependencies for this set of environments can be installed via:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install gymnasium-robotics<span class="o">[</span>mamujoco<span class="o">]</span>
+</pre></div>
+</div>
 <section id="api">
 <h2>API<a class="headerlink" href="#api" title="Permalink to this heading">#</a></h2>
 <p>MaMuJoCo uses the <a class="reference external" href="https://pettingzoo.farama.org/api/parallel/">PettingZoo.ParallelAPI</a>, but also supports a few extra functions</p>
@@ -352,6 +354,7 @@
 <li><p>MaMuJoCo.map_local_observation_to_global_state (NOT IMPLEMENTED)</p></li>
 <li><p>obsk.get_parts_and_edges</p></li>
 </ul>
+<p>MaMuJoCo also supports the <a class="reference external" href="https://pettingzoo.farama.org/api/aec/">PettingZoo.AECAPI</a> but does not expose extra functions.</p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
