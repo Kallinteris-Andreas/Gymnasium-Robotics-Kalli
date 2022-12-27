@@ -355,8 +355,37 @@
 <li><p>obsk.get_parts_and_edges</p></li>
 </ul>
 <p>MaMuJoCo also supports the <a class="reference external" href="https://pettingzoo.farama.org/api/aec/">PettingZoo.AECAPI</a> but does not expose extra functions.</p>
+</section>
+<section id="how-to-create-new-agent-factorizations">
+<h2>How to create new agent factorizations<a class="headerlink" href="#how-to-create-new-agent-factorizations" title="Permalink to this heading">#</a></h2>
+<section id="example-ant-v4-8x1">
+<h3>example ‘Ant-v4’, ‘8x1’<a class="headerlink" href="#example-ant-v4-8x1" title="Permalink to this heading">#</a></h3>
+<p>In this example, we will create an agent factorization not present in MaMuJoCo the “Ant”/’8x1’, where each agent controls a single joint/action (first implemented by <a class="reference external" href="https://github.com/chauncygu/Safe-Multi-Agent-Mujoco">safe-MaMuJoCo</a>)</p>
+<p>first we will load the graph of MaMuJoCo
+TODO fix imoprt</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">multiagent_mujoco.obsk</span> <span class="kn">import</span> <span class="n">get_parts_and_edges</span> 
+<span class="gp">&gt;&gt;&gt; </span><span class="n">unpartioned_nodes</span><span class="p">,</span> <span class="n">edges</span><span class="p">,</span> <span class="n">global_nodes</span> <span class="o">=</span> <span class="n">get_parts_and_edges</span><span class="p">(</span><span class="s1">&#39;Ant-v4&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>the <code class="docutils literal notranslate"><span class="pre">unpartioned_nodes</span></code> contain the nodes of the MaMuJoCo graph
+the <code class="docutils literal notranslate"><span class="pre">edges</span></code> well, contain the edges of the graph
+and the <code class="docutils literal notranslate"><span class="pre">global_nodes</span></code> a set of observations for all agents</p>
+<p>To create our ‘8x1’ partition we will need to partition the <code class="docutils literal notranslate"><span class="pre">unpartioned_nodes</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">unpartioned_nodes</span>
+<span class="go">[(hip1, ankle1, hip2, ankle2, hip3, ankle3, hip4, ankle4)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">partioned_nodes</span> <span class="o">=</span> <span class="p">[(</span><span class="n">unpartioned_nodes</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],),</span> <span class="p">(</span><span class="n">unpartioned_nodes</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],),</span> <span class="p">(</span><span class="n">unpartioned_nodes</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">],),</span> <span class="p">(</span><span class="n">unpartioned_nodes</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">3</span><span class="p">],),</span> <span class="p">(</span><span class="n">unpartioned_nodes</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">4</span><span class="p">],),</span> <span class="p">(</span><span class="n">unpartioned_nodes</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">5</span><span class="p">],),</span> <span class="p">(</span><span class="n">unpartioned_nodes</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">6</span><span class="p">],),</span> <span class="p">(</span><span class="n">unpartioned_nodes</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">7</span><span class="p">],)]</span><span class="o">&gt;&gt;&gt;</span> <span class="n">partioned_nodes</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">partioned_nodes</span>
+<span class="go">[(hip1,), (ankle1,), (hip2,), (ankle2,), (hip3,), (ankle3,), (hip4,), (ankle4,)]</span>
+</pre></div>
+</div>
+<p>finally package the partitions and create our environment</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_agent_factorization</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;partition&quot;</span><span class="p">:</span> <span class="n">partioned_nodes</span><span class="p">,</span> <span class="s2">&quot;edges&quot;</span><span class="p">:</span> <span class="n">edges</span><span class="p">,</span> <span class="s2">&quot;globals&quot;</span><span class="p">:</span> <span class="n">global_nodes</span><span class="p">}</span>
+<span class="n">gym_env</span> <span class="o">=</span> <span class="n">MaMuJoCo</span><span class="p">(</span><span class="s1">&#39;Ant&#39;</span><span class="p">,</span> <span class="s1">&#39;8x1&#39;</span><span class="p">,</span> <span class="n">agent_factorization</span><span class="o">=</span><span class="n">my_agent_factorization</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="toctree-wrapper compound">
 </div>
+</section>
 </section>
 </section>
 
@@ -406,6 +435,10 @@
             <ul>
 <li><a class="reference internal" href="#">MaMuJoCo (Multi-Agent MuJoCo)</a><ul>
 <li><a class="reference internal" href="#api">API</a></li>
+<li><a class="reference internal" href="#how-to-create-new-agent-factorizations">How to create new agent factorizations</a><ul>
+<li><a class="reference internal" href="#example-ant-v4-8x1">example ‘Ant-v4’, ‘8x1’</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
