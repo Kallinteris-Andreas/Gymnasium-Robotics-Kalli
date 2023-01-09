@@ -8,14 +8,14 @@
     <meta property="og:type" content="website" />
     <meta property="og:description" content="" />
     <meta property="og:url" content="https://robotics.farama.org/envs/MaMuJoCo/index.html" /><meta property="og:image" content="https://robotics.farama.org//_static/img/robotics-github.png" /><meta name="twitter:card" content="summary_large_image"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="prev" title="Manipulate Touch Sensors" href="../hand_touch/ManipulateTouchSensors/" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Ant" href="ma_ant/" /><link rel="prev" title="Franka Kitchen" href="../franka_kitchen/franka_kitchen/" />
         <link rel="canonical" href="https://robotics.farama.org/envs/MaMuJoCo/index.html" />
 
     <link rel="shortcut icon" href="../../_static/robotics-favicon.png"/><meta name="generator" content="sphinx-5.3.0, furo 2022.09.15.dev1"/>
         <title>MaMuJoCo (Multi-Agent MuJoCo) - Gymnasium-Robotics Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=3cf7b839e8c50b5f3a39bb99d90baa7b845de926" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=91b9f2a71a58ed2481980f1e5725e16457fde93d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=24b18ece81cb9ff18679a2945b9c89ba44829d18" />
     
     
 
@@ -232,58 +232,72 @@
 <p class="caption" role="heading"><span class="caption-text">Environments</span></p>
 <ul class="current">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../fetch/">Fetch</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../fetch/FetchPickAndPlace/">Fetch Pick And Place</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../fetch/FetchPush/">Fetch Push</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../fetch/FetchReach/">Fetch Reach</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../fetch/FetchSlide/">Fetch Slide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fetch/pick_and_place/">Pick And Place</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fetch/push/">Push</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fetch/reach/">Reach</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fetch/slide/">Slide</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../hand/">Shadow Dexterous Hand</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/">Hand Block</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#special-case-we-want-to-ignore-the-z-component-of-the-rotation">Special case: We want to ignore the Z component of the rotation.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#this-code-here-assumes-euler-angles-with-xyz-convention-we-first-transform">This code here assumes Euler angles with xyz convention. We first transform</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#to-euler-then-set-the-z-component-to-be-equal-between-the-two-and-finally">to euler, then set the Z component to be equal between the two, and finally</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#transform-back-into-quaternions">transform back into quaternions.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#subtract-quaternions-and-extract-angle-between-them">Subtract quaternions and extract angle between them.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#goalenv-methods">GoalEnv methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#id1">—————————-</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#we-weigh-the-difference-in-position-to-avoid-that-d-pos-in-meters-is-completely">We weigh the difference in position to avoid that <code class="docutils literal notranslate"><span class="pre">d_pos</span></code> (in meters) is completely</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#dominated-by-d-rot-in-radians">dominated by <code class="docutils literal notranslate"><span class="pre">d_rot</span></code> (in radians).</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#robotenv-methods">RobotEnv methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#id2">—————————-</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#randomization-initial-rotation">Randomization initial rotation.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#randomize-initial-position">Randomize initial position.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#run-the-simulation-for-a-bunch-of-timesteps-to-let-everything-settle-in">Run the simulation for a bunch of timesteps to let everything settle in.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#select-a-goal-for-the-object-position">Select a goal for the object position.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#select-a-goal-for-the-object-rotation">Select a goal for the object rotation.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#assign-current-state-to-target-object-but-offset-a-bit-so-that-the-actual-object">Assign current state to target object but offset a bit so that the actual object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#is-not-obscured">is not obscured.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#move-the-object-to-the-side-since-we-do-not-care-about-it-s-position">Move the object to the side since we do not care about it’s position.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#object-position-and-rotation">Object position and rotation.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#id3">Randomization initial rotation.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#id4">Randomize initial position.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#id5">Run the simulation for a bunch of timesteps to let everything settle in.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#id6">Select a goal for the object position.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#id7">Select a goal for the object rotation.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#id8">Assign current state to target object but offset a bit so that the actual object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#id9">is not obscured.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#id10">Move the object to the side since we do not care about it’s position.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#noqa-d415">noqa: D415</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandEgg/">Hand Egg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandEgg/#noqa-d415">noqa: D415</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandPen/">Hand Pen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandPen/#noqa-d415">noqa: D415</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandReach/">Hand Reach</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../shadow_dexterous_hand/">Shadow Dexterous Hand</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../shadow_dexterous_hand/manipulate_block/">Manipulate Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shadow_dexterous_hand/manipulate_block_touch_sensors/">Manipulate Block Touch Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shadow_dexterous_hand/manipulate_egg/">Manipulate Egg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shadow_dexterous_hand/manipulate_egg_touch_sensors/">Manipulate Egg Touch Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shadow_dexterous_hand/manipulate_pen/">Manipulate Pen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shadow_dexterous_hand/manipulate_pen_touch_sensors/">Manipulate Pen Touch Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shadow_dexterous_hand/reach/">Reach</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../hand_touch/">Shadow Dexterous Hand with Touch Sensors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../hand_touch/HandBlockTouchSensors/">Hand Block Touch Sensors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand_touch/HandEggTouchSensors/">Hand Egg Touch Sensors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand_touch/HandPenTouchSensors/">Hand Pen Touch Sensors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand_touch/ManipulateTouchSensors/">Manipulate Touch Sensors</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../maze/">Maze</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../maze/ant_maze/">Ant Maze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maze/point_maze/">Point Maze</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">MaMuJoCo (Multi-Agent MuJoCo)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../adroit_hand/">Adroit Hand</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../adroit_hand/adroit_door/">Adroit Door</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../adroit_hand/adroit_hammer/">Adroit Hammer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../adroit_hand/adroit_pen/">Adroit Pen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../adroit_hand/adroit_relocate/">Adroit Relocate</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../franka_kitchen/">Franka Kitchen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../franka_kitchen/franka_kitchen/">Franka Kitchen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">MaMuJoCo (Multi-Agent MuJoCo)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ma_ant/">Ant</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ma_coupled_half_cheetah/">Coupled Half Cheetah</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ma_half_cheetah/">Half Cheetah</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ma_hooper/">Hooper</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ma_humanoid_standup/">Humanoid Standup</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ma_humanoid/">Humanoid</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ma_reacher/">Reacher</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ma_swimmer/">Swimmer</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ma_pusher/">Pusher</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ma_walker2d/">Walker2d</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ma_single/">Single Action Environments</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -337,33 +351,142 @@
           
           <section id="mamujoco-multi-agent-mujoco">
 <h1>MaMuJoCo (Multi-Agent MuJoCo)<a class="headerlink" href="#mamujoco-multi-agent-mujoco" title="Permalink to this heading">#</a></h1>
-<p>These environments were introduced in <a class="reference external" href="https://arxiv.org/abs/2003.06709">“FACMAC: Factored Multi-Agent Centralised Policy Gradients”</a></p>
+<figure class="align-default" id="mamujoco">
+<img alt="../../_images/mamujoco.png" src="../../_images/mamujoco.png" />
+</figure>
+<p>MaMuJoCo was introduced in <a class="reference external" href="https://arxiv.org/abs/2003.06709">“FACMAC: Factored Multi-Agent Centralised Policy Gradients”</a></p>
 <p>There are 2 types of Environments, included (1) multi-agent factorizations of <a class="reference external" href="https://gymnasium.farama.org/environments/mujoco/">Gymansium/MuJoCo</a> tasks and (2) new complex MuJoCo tasks meant to me solved with multi-agent Algorithms</p>
-<p>This Represents the first, easy to use Framework for research of agent factorization</p>
+<p>Gymansium-Robotics/MaMuJoCo Represents the first, easy to use Framework for research of agent factorization</p>
 <p>The unique dependencies for this set of environments can be installed via:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install gymnasium-robotics<span class="o">[</span>mamujoco<span class="o">]</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>gymnasium-robotics<span class="o">[</span>mamujoco<span class="o">]</span>
 </pre></div>
 </div>
 <section id="api">
 <h2>API<a class="headerlink" href="#api" title="Permalink to this heading">#</a></h2>
-<p>MaMuJoCo uses the <a class="reference external" href="https://pettingzoo.farama.org/api/parallel/">PettingZoo.ParallelAPI</a>, but also supports a few extra functions</p>
-<ul class="simple">
-<li><p>MaMuJoCo.map_local_actions_to_global_action</p></li>
-<li><p>MaMuJoCo.map_global_action_to_local_actions</p></li>
-<li><p>MaMuJoCo.map_global_state_to_local_observations</p></li>
-<li><p>MaMuJoCo.map_local_observation_to_global_state (NOT IMPLEMENTED)</p></li>
-<li><p>obsk.get_parts_and_edges</p></li>
+<p>MaMuJoCo mainly uses the <a class="reference external" href="https://pettingzoo.farama.org/api/parallel/">PettingZoo.ParallelAPI</a>, but also supports a few extra functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="gymnasium_robotics.mamujoco_v0.parallel_env.map_local_actions_to_global_action">
+<span class="sig-prename descclassname"><span class="pre">gymnasium_robotics.mamujoco_v0.parallel_env.</span></span><span class="sig-name descname"><span class="pre">map_local_actions_to_global_action</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">actions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#gymnasium_robotics.mamujoco_v0.parallel_env.map_local_actions_to_global_action" title="Permalink to this definition">#</a></dt>
+<dd><p>Maps multi agent actions into single agent action space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>action</strong> – An dict representing the action of each agent</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>The action of the whole domain</strong> (<em>is what eqivilent single agent action would be</em>)</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>AssertionError</strong> – If the Agent action factorization is badly defined (if an action is double defined or not defined at all)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gymnasium_robotics.mamujoco_v0.parallel_env.map_global_action_to_local_actions">
+<span class="sig-prename descclassname"><span class="pre">gymnasium_robotics.mamujoco_v0.parallel_env.</span></span><span class="sig-name descname"><span class="pre">map_global_action_to_local_actions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#gymnasium_robotics.mamujoco_v0.parallel_env.map_global_action_to_local_actions" title="Permalink to this definition">#</a></dt>
+<dd><p>Maps single agent action into multi agent action spaces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>action</strong> – An array representing the actions of the single agent for this domain</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>A dictionary of actions to be performed by each agent</strong></p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>AssertionError</strong> – If the Agent action factorization sizes are badly defined</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gymnasium_robotics.mamujoco_v0.parallel_env.map_global_state_to_local_observations">
+<span class="sig-prename descclassname"><span class="pre">gymnasium_robotics.mamujoco_v0.parallel_env.</span></span><span class="sig-name descname"><span class="pre">map_global_state_to_local_observations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#gymnasium_robotics.mamujoco_v0.parallel_env.map_global_state_to_local_observations" title="Permalink to this definition">#</a></dt>
+<dd><p>Maps single agent observation into multi agent observation spaces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>global_state</strong> – the global_state (generated from MaMuJoCo.state())</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>A dictionary of states that would be observed by each agent given the ‘global_state’</strong></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gymnasium_robotics.mamujoco_v0.parallel_env.map_local_observation_to_global_state">
+<span class="sig-prename descclassname"><span class="pre">gymnasium_robotics.mamujoco_v0.parallel_env.</span></span><span class="sig-name descname"><span class="pre">map_local_observation_to_global_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_observations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#gymnasium_robotics.mamujoco_v0.parallel_env.map_local_observation_to_global_state" title="Permalink to this definition">#</a></dt>
+<dd><p>Maps multi agent observations into single agent observation space.</p>
+<p>NOT IMPLEMENTED, try using MaMuJoCo.state() instead</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>local_obserations</strong> – the local observation of each agents (generated from MaMuJoCo.step())</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>the global observations that correspond to a single agent</strong> (<em>what you would get with MaMuJoCo.state()</em>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gymnasium_robotics.mamujoco_v0.get_parts_and_edges">
+<span class="sig-prename descclassname"><span class="pre">gymnasium_robotics.mamujoco_v0.</span></span><span class="sig-name descname"><span class="pre">get_parts_and_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partitioning</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Node</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">HyperEdge</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">Node</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#gymnasium_robotics.mamujoco_v0.get_parts_and_edges" title="Permalink to this definition">#</a></dt>
+<dd><p>Gets the mujoco Graph (nodes &amp; edges) given an optional partitioning,.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>label</strong> – the mujoco task to partition</p></li>
+<li><p><strong>partitioning</strong> – the partioneing scheme</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>the partition of the mujoco graph nodes, the graph edges, and global nodes</strong></p>
+</dd>
+</dl>
+</dd></dl>
+
 <p>MaMuJoCo also supports the <a class="reference external" href="https://pettingzoo.farama.org/api/aec/">PettingZoo.AECAPI</a> but does not expose extra functions.</p>
+<section id="arguments">
+<h3>Arguments<a class="headerlink" href="#arguments" title="Permalink to this heading">#</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="gymnasium_robotics.mamujoco_v0.parallel_env.__init__">
+<span class="sig-prename descclassname"><span class="pre">gymnasium_robotics.mamujoco_v0.parallel_env.</span></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scenario</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">agent_conf</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">agent_obsk</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">agent_factorization</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_categories</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_categories</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">render_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gymnasium_robotics.mamujoco_v0.parallel_env.__init__" title="Permalink to this definition">#</a></dt>
+<dd><p>Init.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scenario</strong> – The Task/Environment, valid values:
+“Ant”, “HalfCheetah”, “Hopper”, “HumanoidStandup”, “Humanoid”, “Reacher”, “Swimmer”, “Pusher”, “Walker2d”, “InvertedPendulum”, “InvertedDoublePendulum”, “ManySegmentSwimmer”, “ManySegmentAnt”, “CoupledHalfCheetah”</p></li>
+<li><p><strong>agent_conf</strong> – ‘${Number Of Agents}x${Number Of Segments per Agent}${Optionally Additional options}’, eg ‘1x6’, ‘2x4’, ‘2x4d’,
+If it set to None the task becomes single agent (the agent observes the entire environment, and performs all the actions)</p></li>
+<li><p><strong>agent_obsk</strong> – Number of nearest joints to observe,
+If set to 0 it only observes local state,
+If set to 1 it observes local state + 1 joint over,
+If set to 2 it observes local state + 2 joints over,
+If it set to None the task becomes single agent (the agent observes the entire environment, and performs all the actions)
+The Default value is: 1</p></li>
+<li><p><strong>agent_factorization</strong> – A custom factorization of the MuJoCo environment (overwrites agent_conf),
+see DOC [how to create new agent factorizations](<a class="reference external" href="https://robotics.farama.org/envs/MaMuJoCo/index.html#how-to-create-new-agent-factorizations">https://robotics.farama.org/envs/MaMuJoCo/index.html#how-to-create-new-agent-factorizations</a>).</p></li>
+<li><p><strong>local_categories</strong> – The categories of local observations for each observation depth,
+The default is: Everything is observable at depth 0, but only the position items are observable for further depth levels</p></li>
+<li><p><strong>global_categories</strong> – The categories of observation for global observations,
+The default is; local_categories[0]</p></li>
+<li><p><strong>render_mode</strong> – see [Gymansium/MuJoCo](<a class="reference external" href="https://gymnasium.farama.org/environments/mujoco/">https://gymnasium.farama.org/environments/mujoco/</a>),
+valid values: ‘human’, ‘rgb_array’, ‘depth_array’</p></li>
+<li><p><strong>Raises</strong> – NotImplementedError: When the scenario is not supported (not part of of the valid values)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
 </section>
 <section id="how-to-create-new-agent-factorizations">
 <h2>How to create new agent factorizations<a class="headerlink" href="#how-to-create-new-agent-factorizations" title="Permalink to this heading">#</a></h2>
 <section id="example-ant-v4-8x1">
 <h3>example ‘Ant-v4’, ‘8x1’<a class="headerlink" href="#example-ant-v4-8x1" title="Permalink to this heading">#</a></h3>
 <p>In this example, we will create an agent factorization not present in MaMuJoCo the “Ant”/’8x1’, where each agent controls a single joint/action (first implemented by <a class="reference external" href="https://github.com/chauncygu/Safe-Multi-Agent-Mujoco">safe-MaMuJoCo</a>)</p>
-<p>first we will load the graph of MaMuJoCo
-TODO fix imoprt</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">multiagent_mujoco.obsk</span> <span class="kn">import</span> <span class="n">get_parts_and_edges</span> 
+<p>first we will load the graph of MaMuJoCo</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">gymnasium_robotics.mamujoco_v0</span> <span class="kn">import</span> <span class="n">get_parts_and_edges</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">unpartioned_nodes</span><span class="p">,</span> <span class="n">edges</span><span class="p">,</span> <span class="n">global_nodes</span> <span class="o">=</span> <span class="n">get_parts_and_edges</span><span class="p">(</span><span class="s1">&#39;Ant-v4&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -379,13 +502,17 @@ and the <code class="docutils literal notranslate"><span class="pre">global_node
 </pre></div>
 </div>
 <p>finally package the partitions and create our environment</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_agent_factorization</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;partition&quot;</span><span class="p">:</span> <span class="n">partioned_nodes</span><span class="p">,</span> <span class="s2">&quot;edges&quot;</span><span class="p">:</span> <span class="n">edges</span><span class="p">,</span> <span class="s2">&quot;globals&quot;</span><span class="p">:</span> <span class="n">global_nodes</span><span class="p">}</span>
-<span class="n">gym_env</span> <span class="o">=</span> <span class="n">MaMuJoCo</span><span class="p">(</span><span class="s1">&#39;Ant&#39;</span><span class="p">,</span> <span class="s1">&#39;8x1&#39;</span><span class="p">,</span> <span class="n">agent_factorization</span><span class="o">=</span><span class="n">my_agent_factorization</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_agent_factorization</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;partition&quot;</span><span class="p">:</span> <span class="n">partioned_nodes</span><span class="p">,</span> <span class="s2">&quot;edges&quot;</span><span class="p">:</span> <span class="n">edges</span><span class="p">,</span> <span class="s2">&quot;globals&quot;</span><span class="p">:</span> <span class="n">global_nodes</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gym_env</span> <span class="o">=</span> <span class="n">mamujoco_v0</span><span class="p">(</span><span class="s1">&#39;Ant&#39;</span><span class="p">,</span> <span class="s1">&#39;8x1&#39;</span><span class="p">,</span> <span class="n">agent_factorization</span><span class="o">=</span><span class="n">my_agent_factorization</span><span class="p">)</span>
 </pre></div>
 </div>
+</section>
+</section>
+<section id="version-history">
+<h2>Version History<a class="headerlink" href="#version-history" title="Permalink to this heading">#</a></h2>
+<p>v0: Initial version release, uses <a class="reference external" href="https://gymnasium.farama.org/environments/mujoco/">Gymnasium.MuJoCo-v4</a>, and is a fork of <a class="reference external" href="https://github.com/schroederdewitt/multiagent_mujoco">the original multiagent_mujuco</a></p>
 <div class="toctree-wrapper compound">
 </div>
-</section>
 </section>
 </section>
 
@@ -434,11 +561,23 @@ and the <code class="docutils literal notranslate"><span class="pre">global_node
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">MaMuJoCo (Multi-Agent MuJoCo)</a><ul>
-<li><a class="reference internal" href="#api">API</a></li>
+<li><a class="reference internal" href="#api">API</a><ul>
+<li><a class="reference internal" href="#gymnasium_robotics.mamujoco_v0.parallel_env.map_local_actions_to_global_action"><code class="docutils literal notranslate"><span class="pre">map_local_actions_to_global_action()</span></code></a></li>
+<li><a class="reference internal" href="#gymnasium_robotics.mamujoco_v0.parallel_env.map_global_action_to_local_actions"><code class="docutils literal notranslate"><span class="pre">map_global_action_to_local_actions()</span></code></a></li>
+<li><a class="reference internal" href="#gymnasium_robotics.mamujoco_v0.parallel_env.map_global_state_to_local_observations"><code class="docutils literal notranslate"><span class="pre">map_global_state_to_local_observations()</span></code></a></li>
+<li><a class="reference internal" href="#gymnasium_robotics.mamujoco_v0.parallel_env.map_local_observation_to_global_state"><code class="docutils literal notranslate"><span class="pre">map_local_observation_to_global_state()</span></code></a></li>
+<li><a class="reference internal" href="#gymnasium_robotics.mamujoco_v0.get_parts_and_edges"><code class="docutils literal notranslate"><span class="pre">get_parts_and_edges()</span></code></a></li>
+<li><a class="reference internal" href="#arguments">Arguments</a><ul>
+<li><a class="reference internal" href="#gymnasium_robotics.mamujoco_v0.parallel_env.__init__"><code class="docutils literal notranslate"><span class="pre">__init__()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="reference internal" href="#how-to-create-new-agent-factorizations">How to create new agent factorizations</a><ul>
 <li><a class="reference internal" href="#example-ant-v4-8x1">example ‘Ant-v4’, ‘8x1’</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#version-history">Version History</a></li>
 </ul>
 </li>
 </ul>

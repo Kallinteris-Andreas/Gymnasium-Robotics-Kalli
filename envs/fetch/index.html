@@ -8,14 +8,14 @@
     <meta property="og:type" content="website" />
     <meta property="og:description" content="" />
     <meta property="og:url" content="https://robotics.farama.org/envs/fetch/index.html" /><meta property="og:image" content="https://robotics.farama.org//_static/img/robotics-github.png" /><meta name="twitter:card" content="summary_large_image"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Fetch Pick And Place" href="FetchPickAndPlace/" /><link rel="prev" title="Multi-goal API" href="../../content/multi-goal_api/" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Pick And Place" href="pick_and_place/" /><link rel="prev" title="Multi-goal API" href="../../content/multi-goal_api/" />
         <link rel="canonical" href="https://robotics.farama.org/envs/fetch/index.html" />
 
     <link rel="shortcut icon" href="../../_static/robotics-favicon.png"/><meta name="generator" content="sphinx-5.3.0, furo 2022.09.15.dev1"/>
         <title>Fetch - Gymnasium-Robotics Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=3cf7b839e8c50b5f3a39bb99d90baa7b845de926" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=91b9f2a71a58ed2481980f1e5725e16457fde93d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=24b18ece81cb9ff18679a2945b9c89ba44829d18" />
     
     
 
@@ -205,7 +205,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -232,58 +232,72 @@
 <p class="caption" role="heading"><span class="caption-text">Environments</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Fetch</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="FetchPickAndPlace/">Fetch Pick And Place</a></li>
-<li class="toctree-l2"><a class="reference internal" href="FetchPush/">Fetch Push</a></li>
-<li class="toctree-l2"><a class="reference internal" href="FetchReach/">Fetch Reach</a></li>
-<li class="toctree-l2"><a class="reference internal" href="FetchSlide/">Fetch Slide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pick_and_place/">Pick And Place</a></li>
+<li class="toctree-l2"><a class="reference internal" href="push/">Push</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reach/">Reach</a></li>
+<li class="toctree-l2"><a class="reference internal" href="slide/">Slide</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../hand/">Shadow Dexterous Hand</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/">Hand Block</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#special-case-we-want-to-ignore-the-z-component-of-the-rotation">Special case: We want to ignore the Z component of the rotation.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#this-code-here-assumes-euler-angles-with-xyz-convention-we-first-transform">This code here assumes Euler angles with xyz convention. We first transform</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#to-euler-then-set-the-z-component-to-be-equal-between-the-two-and-finally">to euler, then set the Z component to be equal between the two, and finally</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#transform-back-into-quaternions">transform back into quaternions.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#subtract-quaternions-and-extract-angle-between-them">Subtract quaternions and extract angle between them.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#goalenv-methods">GoalEnv methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#id1">—————————-</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#we-weigh-the-difference-in-position-to-avoid-that-d-pos-in-meters-is-completely">We weigh the difference in position to avoid that <code class="docutils literal notranslate"><span class="pre">d_pos</span></code> (in meters) is completely</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#dominated-by-d-rot-in-radians">dominated by <code class="docutils literal notranslate"><span class="pre">d_rot</span></code> (in radians).</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#robotenv-methods">RobotEnv methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#id2">—————————-</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#randomization-initial-rotation">Randomization initial rotation.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#randomize-initial-position">Randomize initial position.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#run-the-simulation-for-a-bunch-of-timesteps-to-let-everything-settle-in">Run the simulation for a bunch of timesteps to let everything settle in.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#select-a-goal-for-the-object-position">Select a goal for the object position.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#select-a-goal-for-the-object-rotation">Select a goal for the object rotation.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#assign-current-state-to-target-object-but-offset-a-bit-so-that-the-actual-object">Assign current state to target object but offset a bit so that the actual object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#is-not-obscured">is not obscured.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#move-the-object-to-the-side-since-we-do-not-care-about-it-s-position">Move the object to the side since we do not care about it’s position.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#object-position-and-rotation">Object position and rotation.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#id3">Randomization initial rotation.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#id4">Randomize initial position.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#id5">Run the simulation for a bunch of timesteps to let everything settle in.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#id6">Select a goal for the object position.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#id7">Select a goal for the object rotation.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#id8">Assign current state to target object but offset a bit so that the actual object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#id9">is not obscured.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#id10">Move the object to the side since we do not care about it’s position.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandBlock/#noqa-d415">noqa: D415</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandEgg/">Hand Egg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandEgg/#noqa-d415">noqa: D415</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandPen/">Hand Pen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandPen/#noqa-d415">noqa: D415</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand/HandReach/">Hand Reach</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../shadow_dexterous_hand/">Shadow Dexterous Hand</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../shadow_dexterous_hand/manipulate_block/">Manipulate Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shadow_dexterous_hand/manipulate_block_touch_sensors/">Manipulate Block Touch Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shadow_dexterous_hand/manipulate_egg/">Manipulate Egg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shadow_dexterous_hand/manipulate_egg_touch_sensors/">Manipulate Egg Touch Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shadow_dexterous_hand/manipulate_pen/">Manipulate Pen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shadow_dexterous_hand/manipulate_pen_touch_sensors/">Manipulate Pen Touch Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shadow_dexterous_hand/reach/">Reach</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../hand_touch/">Shadow Dexterous Hand with Touch Sensors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../hand_touch/HandBlockTouchSensors/">Hand Block Touch Sensors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand_touch/HandEggTouchSensors/">Hand Egg Touch Sensors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand_touch/HandPenTouchSensors/">Hand Pen Touch Sensors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hand_touch/ManipulateTouchSensors/">Manipulate Touch Sensors</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../maze/">Maze</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../maze/ant_maze/">Ant Maze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maze/point_maze/">Point Maze</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../MaMuJoCo/">MaMuJoCo (Multi-Agent MuJoCo)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../adroit_hand/">Adroit Hand</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../adroit_hand/adroit_door/">Adroit Door</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../adroit_hand/adroit_hammer/">Adroit Hammer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../adroit_hand/adroit_pen/">Adroit Pen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../adroit_hand/adroit_relocate/">Adroit Relocate</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../franka_kitchen/">Franka Kitchen</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../franka_kitchen/franka_kitchen/">Franka Kitchen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../MaMuJoCo/">MaMuJoCo (Multi-Agent MuJoCo)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../MaMuJoCo/ma_ant/">Ant</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../MaMuJoCo/ma_coupled_half_cheetah/">Coupled Half Cheetah</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../MaMuJoCo/ma_half_cheetah/">Half Cheetah</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../MaMuJoCo/ma_hooper/">Hooper</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../MaMuJoCo/ma_humanoid_standup/">Humanoid Standup</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../MaMuJoCo/ma_humanoid/">Humanoid</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../MaMuJoCo/ma_reacher/">Reacher</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../MaMuJoCo/ma_swimmer/">Swimmer</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../MaMuJoCo/ma_pusher/">Pusher</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../MaMuJoCo/ma_walker2d/">Walker2d</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../MaMuJoCo/ma_single/">Single Action Environments</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -328,7 +342,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -345,60 +359,71 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">FetchPickAndPlace-v2</span></code>: Fetch has to pick up a box from a table using its gripper and move it to a desired goal above the table.</p></li>
 </ul>
 
-<div class="env-grid">
-    
-            <a href="FetchPickAndPlace">
-                <div class="env-grid__cell">
-                    <div class="cell__image-container">
-                        <img src="/_static/videos/fetch/FetchPickAndPlace.gif">
+    <div class="env-grid">
+        
+                <a href="slide">
+                    <div class="env-grid__cell">
+                        <div class="cell__image-container">
+                            <img src="/_static/videos/fetch/slide.gif">
+                        </div>
+                        <div class="cell__title">
+                            <span>Slide</span>
+                        </div>
                     </div>
-                    <div class="cell__title">
-                        <span>Fetchpickandplace</span>
-                    </div>
-                </div>
-            </a>
-    
+                </a>
+            
 
-            <a href="FetchPush">
-                <div class="env-grid__cell">
-                    <div class="cell__image-container">
-                        <img src="/_static/videos/fetch/FetchPush.gif">
+                <a href="pick_and_place">
+                    <div class="env-grid__cell">
+                        <div class="cell__image-container">
+                            <img src="/_static/videos/fetch/pick_and_place.gif">
+                        </div>
+                        <div class="cell__title">
+                            <span>Pick And Place</span>
+                        </div>
                     </div>
-                    <div class="cell__title">
-                        <span>Fetchpush</span>
-                    </div>
-                </div>
-            </a>
-    
+                </a>
+            
 
-            <a href="FetchReach">
-                <div class="env-grid__cell">
-                    <div class="cell__image-container">
-                        <img src="/_static/videos/fetch/FetchReach.gif">
+                <a href="reach">
+                    <div class="env-grid__cell">
+                        <div class="cell__image-container">
+                            <img src="/_static/videos/fetch/reach.gif">
+                        </div>
+                        <div class="cell__title">
+                            <span>Reach</span>
+                        </div>
                     </div>
-                    <div class="cell__title">
-                        <span>Fetchreach</span>
-                    </div>
-                </div>
-            </a>
-    
+                </a>
+            
 
-            <a href="FetchSlide">
-                <div class="env-grid__cell">
-                    <div class="cell__image-container">
-                        <img src="/_static/videos/fetch/FetchSlide.gif">
+                <a href="push">
+                    <div class="env-grid__cell">
+                        <div class="cell__image-container">
+                            <img src="/_static/videos/fetch/push.gif">
+                        </div>
+                        <div class="cell__title">
+                            <span>Push</span>
+                        </div>
                     </div>
-                    <div class="cell__title">
-                        <span>Fetchslide</span>
-                    </div>
-                </div>
-            </a>
-    
+                </a>
+            
+    </div>
+        
+<section id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this heading">#</a></h2>
+<p>If using the <code class="docutils literal notranslate"><span class="pre">Fetch</span></code> environments, please cite:</p>
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@misc</span><span class="p">{</span><span class="nl">1802.09464</span><span class="p">,</span>
+<span class="w">  </span><span class="na">Author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Matthias Plappert and Marcin Andrychowicz and Alex Ray and Bob McGrew and Bowen Baker and Glenn Powell and Jonas Schneider and Josh Tobin and Maciek Chociej and Peter Welinder and Vikash Kumar and Wojciech Zaremba}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">Title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Multi-Goal Reinforcement Learning: Challenging Robotics Environments and Request for Research}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">Year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2018}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">Eprint</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{arXiv:1802.09464}</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
 </div>
-
-    
 <div class="toctree-wrapper compound">
 </div>
+</section>
 </section>
 
         </article>
@@ -433,8 +458,27 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Fetch</a><ul>
+<li><a class="reference internal" href="#reference">Reference</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
