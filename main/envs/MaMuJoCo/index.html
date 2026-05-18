@@ -402,12 +402,16 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="gymnasium_robotics.mamujoco_v1.get_parts_and_edges">
 <span class="sig-prename descclassname"><span class="pre">gymnasium_robotics.mamujoco_v1.</span></span><span class="sig-name descname"><span class="pre">get_parts_and_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partitioning</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Node</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">HyperEdge</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">Node</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#gymnasium_robotics.mamujoco_v1.get_parts_and_edges" title="Link to this definition">¶</a></dt>
-<dd><p>Gets the mujoco Graph (nodes &amp; edges) given an optional partitioning,.
-:param label: the mujoco task to partition
-:param partitioning: the partioneing scheme</p>
+<dd><p>Get the mujoco Graph (nodes &amp; edges) given an optional partitioning.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>the partition of the mujoco graph nodes, the graph edges, and global nodes</strong></p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>label</strong> – the mujoco task to partition</p></li>
+<li><p><strong>partitioning</strong> – the partioneing scheme</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>the partition of the mujoco graph nodes, the graph edges, and global nodes</strong></p>
 </dd>
 </dl>
 </dd></dl>
